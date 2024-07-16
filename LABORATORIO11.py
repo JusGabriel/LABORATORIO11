@@ -39,7 +39,7 @@ def login():
     return mostrar_menu_principal()
 
 def registro_usuarios():
-    print("\n ¿Qué acción desea realizar?: ")
+    print("¿Qué acción desea realizar?: ")
     print('*  1) Ingresar usuarios')
     print('*  2) Mostrar usuarios')
     print('*  3) Salir al menú principal')
@@ -57,7 +57,7 @@ def ingresar_usuarios():
     while True:
         try:
             numPersonas = int(input("Ingrese el número de personas a registrar (1-20): "))
-            if 1 <= numPersonas <= 20:
+            if 1 <= numPersonas<= 20:
                 break
             else:
                 print("Número fuera de rango. Intente de nuevo. ")
@@ -71,7 +71,7 @@ def ingresar_usuarios():
                 break
             else:
                 print("El nombre no debe contener números. Intente de nuevo. ")
-        huellaUsuario = input("Huella facial: ")
+        huellaUsuario =input("Huella facial: ")
         datosBiometrico[0].append(nombreUsuario)
         datosBiometrico[1].append(huellaUsuario)
         datosBiometrico[2].append(random.randrange(1000, 9999))
